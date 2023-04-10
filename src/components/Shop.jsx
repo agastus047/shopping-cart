@@ -2,9 +2,9 @@ import ItemCard from "./ItemCard";
 
 const Shop = ({items,handleAddToCart}) => {
 
-    const renderedCards = items.map(item => {
-        <ItemCard item={item} handleAddToCart={handleAddToCart}/>
-    });
+    const renderedCards = items.map(item => (
+        <ItemCard key={item.id} item={item} handleAddToCart={handleAddToCart}/>
+    ));
 
     return(
         <div>

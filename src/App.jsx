@@ -16,7 +16,7 @@ function App() {
     if(cartContents.some(item => item.id === id)) {
       setCartContents(cartContents.map(item => {
         if(item.id === id) {
-          return {...item,count:count+1};
+          return {...item,count:item.count+1};
         }
         return item;
       }));
@@ -36,7 +36,7 @@ function App() {
     else {
       setCartContents(cartContents.map(item => {
         if(item.id === id) {
-          return {...item,count:count-1};
+          return {...item,count:item.count-1};
         }
         return item;
       }));
