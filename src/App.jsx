@@ -53,7 +53,7 @@ function App() {
         <Navbar />
         <Routes>
           <Route path="/" element={<Home/>} />
-          <Route path="/shop" element={<Shop handleAddToCart={handleAddToCart}/>} />
+          <Route path="/shop" element={<Shop items={items} handleAddToCart={handleAddToCart}/>} />
           <Route path="/cart" element={<Cart handleAddToCart={handleAddToCart} handleDeleteFromCart={handleDeleteFromCart} handleDecremetCount={handleDecremetCount} />} />
         </Routes>
       </BrowserRouter>

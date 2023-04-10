@@ -1,7 +1,14 @@
-const Shop = () => {
+import ItemCard from "./ItemCard";
+
+const Shop = ({items,handleAddToCart}) => {
+
+    const renderedCards = items.map(item => {
+        <ItemCard item={item} handleAddToCart={handleAddToCart}/>
+    });
+
     return(
         <div>
-            Shop Page
+            {renderedCards}
         </div>
     );
 };
