@@ -1,7 +1,10 @@
+import { Link } from "react-router-dom";
+
 const Home = () => {
     return(
         <div>
-            Home Page
+            <div>HOME PAGE</div>
+            <button><Link to="/shop">Shop Now!</Link></button>
         </div>
     );
 };

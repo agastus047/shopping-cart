@@ -6,6 +6,7 @@ import Shop from './components/Shop'
 import Cart from './components/Cart'
 import itemsList from './assets/itemsList'
 import { useState } from 'react'
+import Footer from './components/Footer'
 
 function App() {
   const [items,setItems] = useState(itemsList);
@@ -28,7 +29,7 @@ function App() {
     }
   }
 
-  function handleDecremetCount(id) {
+  function handleDecrementCount(id) {
     let selectedItem = cartContents.find(item => item.id === id);
     if(selectedItem.count === 1) {
       handleDeleteFromCart(id);
@@ -54,8 +55,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Home/>} />
           <Route path="/shop" element={<Shop items={items} handleAddToCart={handleAddToCart}/>} />
-          <Route path="/cart" element={<Cart handleAddToCart={handleAddToCart} handleDeleteFromCart={handleDeleteFromCart} handleDecremetCount={handleDecremetCount} />} />
+          <Route path="/cart" element={<Cart cartContents={cartContents} handleAddToCart={handleAddToCart} handleDeleteFromCart={handleDeleteFromCart} handleDecrementCount={handleDecrementCount} />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </div>
   )
