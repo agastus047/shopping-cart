@@ -1,9 +1,9 @@
-import ItemCard from "./ItemCard";
+import ShopCard from "./ShopCard";
 
-const Shop = ({items,handleAddToCart}) => {
+const Shop = ({items}) => {
 
     const renderedCards = items.map(item => (
-        <ItemCard key={item.id} item={item} handleAddToCart={handleAddToCart}/>
+        <ShopCard key={item.id} item={item} />
     ));
 
     return(

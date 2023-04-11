@@ -1,13 +1,19 @@
-const ItemCard = ({item, handleAddToCart}) => {
+import { useParams } from "react-router-dom";
+const ItemCard = ({items,handleAddToCart}) => {
+
+    const {id} = useParams();
+    const itemId = +id;
 
     const handleClick = () => {
-        handleAddToCart(item.id);
+        handleAddToCart(itemId);
     };
 
+    const selectedItem = items.find(item => item.id === itemId);
+    
     return(
         <div>
-            <div>{item.title}</div>
-            <div>{item.price}</div>
+            <div>{selectedItem.title}</div>
+            <div>{selectedItem.price}</div>
             <button onClick={handleClick}>Add to cart</button>
         </div>
     );
