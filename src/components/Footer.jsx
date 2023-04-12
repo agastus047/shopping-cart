@@ -1,6 +1,6 @@
 const Footer = () => {
     return(
-        <div className="mt-auto">
+        <div>
             <div>Github</div>
             <div>Image credits</div>
         </div>

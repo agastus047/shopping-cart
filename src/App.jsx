@@ -8,6 +8,7 @@ import itemsList from './assets/itemsList'
 import { useState } from 'react'
 import Footer from './components/Footer'
 import ItemCard from './components/ItemCard'
+import 'primeicons/primeicons.css';
 
 function App() {
   const [items,setItems] = useState(itemsList);
@@ -50,9 +51,9 @@ function App() {
   }
 
   return (
-    <div className="App">
+    <div className="App min-h-screen flex flex-col font-source">
       <BrowserRouter>
-        <Navbar />
+        <Navbar cartContents={cartContents}/>
         <Routes>
           <Route path="/" element={<Home/>} />
           <Route path="/shop" element={<Shop items={items} />} />
