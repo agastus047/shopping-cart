@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 const Home = () => {
     return(
         <div className="bg-[url('/src/assets/shoe_chain.jpg')] text-slate-50 flex-auto bg-no-repeat bg-cover bg-center flex flex-col justify-center items-center px-4">
-            <div>dont forget shoe Image</div>
             <div className="text-7xl text-center font-black mb-4">Make Every Step Count</div>
             <Link to="/shop" className="relative inline-flex items-center justify-center p-4 px-5 py-3 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out rounded-full shadow-xl group hover:ring-1 hover:ring-purple-500">
                 <span className="absolute inset-0 w-full h-full bg-gradient-to-br from-blue-600 via-purple-600 to-pink-700"></span>

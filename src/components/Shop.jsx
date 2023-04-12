@@ -7,7 +7,7 @@ const Shop = ({items}) => {
     ));
 
     return(
-        <div>
+        <div className="flex-auto p-7 flex flex-col gap-6">
             {renderedCards}
         </div>
     );
