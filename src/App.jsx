@@ -1,5 +1,5 @@
 import './App.css'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { HashRouter, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Home from './components/Home'
 import Shop from './components/Shop'
@@ -52,7 +52,7 @@ function App() {
 
   return (
     <div className="App min-h-screen flex flex-col font-source">
-      <BrowserRouter>
+      <HashRouter>
         <Navbar cartContents={cartContents}/>
         <Routes>
           <Route path="/" element={<Home/>} />
@@ -61,7 +61,7 @@ function App() {
           <Route path="/cart" element={<Cart cartContents={cartContents} handleAddToCart={handleAddToCart} handleDeleteFromCart={handleDeleteFromCart} handleDecrementCount={handleDecrementCount} />} />
         </Routes>
         <Footer />
-      </BrowserRouter>
+      </HashRouter>
     </div>
   )
 }
